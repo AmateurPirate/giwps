@@ -51,7 +51,7 @@ class WilsonPrimeSearch:
                 print(result)
         
         df = df.rename(columns={0: 'primes', 1: 'remainders'})
-        df.to_csv('/Users/chenzhe/Desktop/prime_search2/test_output1.csv', index=False)
+        df.to_csv('/usr/src/data/test_output1.csv', index=False)
     
 
     @property
