@@ -54,7 +54,7 @@ class WilsonPrimeSearch:
         fname = 'results_{:.2e}_{:.2e}'.format(self.search_floor, self.search_ceiling)
         fname = re.sub(r'[^\w]', '', fname)
         df = df.rename(columns={0: 'primes', 1: 'remainders'})
-        df.to_csv(r'/data_output/{fname}', index=False)
+        df.to_csv(f'/data_output/{fname}', index=False)
     
 
     @property
