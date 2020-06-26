@@ -4,6 +4,7 @@ import concurrent.futures
 from math import factorial, log
 import multiprocessing
 from pandas import DataFrame
+import re
 import timeit
 
 
@@ -50,8 +51,10 @@ class WilsonPrimeSearch:
                 df = df.append([result])
                 print(result)
         
+        fname = 'results_{:.2e}_{:.2e}'.format(self.search_floor, self.search_ceiling)
+        fname = re.sub(r'[^\w]', '', fname)
         df = df.rename(columns={0: 'primes', 1: 'remainders'})
-        df.to_csv('/data_output/test_output1.csv', index=False)
+        df.to_csv(r'/data_output/{fname}', index=False)
     
 
     @property
