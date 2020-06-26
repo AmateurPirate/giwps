@@ -4,7 +4,7 @@ FROM python:3.7
 
 WORKDIR /usr/src
 
-RUN mkdir /usr/src/data
+RUN mkdir -p /usr/src/data
 
 COPY requirements.txt /usr/src
 COPY giwps.py /usr/src
